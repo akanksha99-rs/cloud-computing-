@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REALTIME CHAT APP</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="content">
+        <div class="chat-content">
+            <div class="chat-profile">
+                <div class="group-icon">
+                    <div class="back-circle">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="my-detail">
+                    <h4>You</h4>
+                </div>
+                <div class="active-users">
+                    <h4>Active Users</h4>
+                    <ul class="user-list">
+                    </ul>
+                </div>
+
+            </div>
+            <div class="chat-box">
+                    <div class="group-chat-name">
+                        <div class="group-name">GROUP CHAT</div>          
+                    </div>    
+                    <div class="change-group-name">
+                        <i class="far fa-edit"></i>
+                        <input type="text" id="new-group-name" class="hide"   placeholder="Type group name">
+                    </div>  
+                <div class="chat-area">
+                        <div class="chat join">You joined the chat</div>
+                </div>
+                <div class="chat-input">
+                    <div class="emoji-box">
+                        <i class="far fa-laugh-beam"></i>
+                        <div class="emoji-options hide">
+                            <div class="r">
+                                <p>&#128512;</p>
+                                <p>&#128513;</p>
+                                <p>&#128514;</p>
+                                <p>&#128515;</p>
+                                <p>&#128516;</p>   
+                            </div>
+                            <div class="r">
+                                <p>&#128562;</p>
+                                <p>&#128151;</p>
+                                <p>&#128517;</p>
+                                <p>&#128518;</p>
+                                <p>&#128519;</p>   
+                            </div>
+                            <div class="r">
+                                <p>&#128521;</p>
+                                <p>&#128522;</p>
+                                <p>&#128523;</p>
+                                <p>&#128524;</p>
+                                <p>&#128525;</p>   
+                            </div>
+                            <div class="r">
+                                <p>&#128526;</p>
+                                <p>&#128527;</p>
+                                <p>&#128528;</p>
+                                <p>&#128530;</p>
+                                <p>&#128532;</p> 
+                            </div>
+                            <div class="r">
+                                <p>&#128533;</p>
+                                <p>&#128536;</p>
+                                <p>&#128538;</p>
+                                <p>&#128540;</p>
+                                <p>&#128541;</p> 
+                            </div>
+                            <div class="r">
+                                <p>&#128544;</p>
+                                <p>&#128545;</p>
+                                <p>&#128548;</p>
+                                <p>&#128556;</p>
+                                <p>&#128578;</p>
+                            </div>
+                            <div class="r">
+                                <p>&#128579;</p>
+                                <p>&#128580;</p>
+                                <p>&#129315;</p>
+                                <p>&#129320;</p>
+                                <p>&#129325;</p>  
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" id="input-text" placeholder="Type a message!">
+                    <div class="send-chat-button">
+                        <i class="fas fa-arrow-circle-up"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
+    <script>
+        const socket = io.connect("http://localhost:3000");
+        console.log(socket) ;
+    </script>
+    <script src="./script.js"></script>
+    <script src="./socket.js"></script>
+</body>
+</html>
